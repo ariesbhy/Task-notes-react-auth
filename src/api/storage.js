@@ -8,6 +8,6 @@ const getToken = () => {
 };
 
 const deleteToken = () => {
-  localStorage.removeItem("token");
+  localStorage.removeItem("token"); //for logout
 };
 export { setToken, getToken, deleteToken };
