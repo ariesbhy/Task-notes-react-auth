@@ -48,15 +48,15 @@ const Register = () => {
           </div>
           <div className="mb-4">
             <label
-              htmlFor="Username"
+              htmlFor="email"
               className="block text-white text-sm font-medium mb-2"
             >
-              Username
+              Email
             </label>
             <input
-              type="Username"
-              id="Username"
-              name="Username"
+              type="email"
+              id="email"
+              name="email"
               onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
