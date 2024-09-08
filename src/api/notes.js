@@ -10,8 +10,8 @@ const getNote = async (noteId) => {
   return data;
 };
 
-const createNote = async (noteInfo) => {
-  const { data } = await instance.post("/notes", noteInfo);
+const createNote = async (noteinfo) => {
+  const { data } = await instance.post("/notes", noteinfo);
   return data;
 };
 

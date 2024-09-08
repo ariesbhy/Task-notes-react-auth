@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import UserContext from "../context/UserContext";
 
+const [user, setUser] = useContext(UserContext);
+{
+  user ? <> /*components*/ </> : <> /*components*/ </>;
+}
 const Navbar = () => {
   return (
     <nav className="bg-gray-800">

@@ -3,12 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 
 function App() {
-  return (
-    <div className="App font-mono ">
-      <Navbar />
-      <Outlet />
-    </div>
-  );
+  return <div></div>;
 }
 
 export default App;

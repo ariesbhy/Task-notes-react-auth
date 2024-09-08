@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { register } from "../api/auth";
+import { useMutation } from "@tanstack/react-query";
 
 const Register = () => {
   const [userInfo, setUserInfo] = useState({});
@@ -11,9 +13,16 @@ const Register = () => {
     }
   };
 
+  const { mutate } = useMutation({
+    mutationKey: ["register"],
+    mutationFn: () => register(userInfo),
+  });
+
   const handleFormSubmit = (e) => {
     // e.preventDefault();
     // Add register logic here
+    console.log(userInfo);
+    mutate();
   };
 
   return (
@@ -39,15 +48,15 @@ const Register = () => {
           </div>
           <div className="mb-4">
             <label
-              htmlFor="email"
+              htmlFor="Username"
               className="block text-white text-sm font-medium mb-2"
             >
-              Email
+              Username
             </label>
             <input
-              type="email"
-              id="email"
-              name="email"
+              type="Username"
+              id="Username"
+              name="Username"
               onChange={handleChange}
               className="w-full px-4 py-2 border border-gray-700 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
@@ -87,6 +96,7 @@ const Register = () => {
           </div>
           <div className="flex justify-center">
             <button
+              onClick={handleFormSubmit}
               type="submit"
               className="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors"
             >
